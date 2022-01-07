@@ -91,6 +91,7 @@
         key_name: "{{ keypair_name }}"
         instance_type: "t2.micro"
         image: "ami-052cef05d01020f1d"
+        user_data: "{{ lookup('file', 'user-data.sh') }}"
         group_id:
           - "{{ sg1_status.group_id }}"
           - "{{ sg2_status.group_id }}"
@@ -98,4 +99,4 @@
           Name: "webserver"
         count_tag:
           Name: "webserver"
-        exact_count: 2
+        exact_count: 1
