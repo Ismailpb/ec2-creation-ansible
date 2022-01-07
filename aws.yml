@@ -69,7 +69,7 @@
               - 0.0.0.0/0
             cidr_ipv6:
               - ::/0
-        rules:
+             
           - proto: tcp
             from_port: 443
             to_port: 443
@@ -96,7 +96,7 @@
           - "{{ sg1_status.group_id }}"
           - "{{ sg2_status.group_id }}"
         instance_tags:
-          Name: "webserver"
+          Name: "ansible-test"
         count_tag:
-          Name: "webserver"
+          Name: "ansible-test"
         exact_count: 1
