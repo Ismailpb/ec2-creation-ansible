@@ -1,4 +1,4 @@
-# ec2-creation-ansible
+# Ec2-creation-ansible
 
 This is a simple project to create an ec2 instance with sample website.
 
@@ -84,7 +84,7 @@ This will create a keypair named "ansible.pem in local to connect the ec2.
 
 For this project I have created two security group named ansible-remote and ansible-webserver.
 
----
+```
 - name: "Creating Security Group {{ sg1 }}"
       ec2_group:
         aws_access_key: "{{ access_key }}"
@@ -104,8 +104,6 @@ For this project I have created two security group named ansible-remote and ansi
         tags:
           name: "{{ sg1 }}"
       register: sg1_status
-
-
 
 
     - name: "Creation of Security Group {{ sg2 }}"
