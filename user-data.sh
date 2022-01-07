@@ -12,7 +12,7 @@ cat <<EOF > /var/www/html/index.php
 <?php
 \$output = shell_exec('echo $HOSTNAME');
 echo "<h1><center><pre>\$output</pre></center></h1>";
-echo "<h1><center> Support-Team </center></h1>"
+echo "<h1><center> Ansible-Test </center></h1>"
 ?>
 EOF
 
